@@ -1,0 +1,7 @@
+{
+  "name": "travel-aid",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

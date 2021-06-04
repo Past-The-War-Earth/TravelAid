@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngIf="destinationId && destination; else newDestination">
+      {{destination.name}},
+      {{destination.region}},
+      {{destination.country}}
+    </ion-title>
+    <ng-template #newDestination>
+      <ion-title>New Destination</ion-title>
+    </ng-template>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Destinations
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Destinations</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item
+      *ngFor="let destinationSummary of destinationSummaries"
+      [routerLink]="['./destination', destinationSummary.id]"
+    >
+
+      <ion-avatar slot="start">
+      </ion-avatar>
+      <ion-label>
+        {{destinationSummary.name}},
+        {{destinationSummary.region}},
+        {{destinationSummary.country}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="['./edit-destination', null]" >
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
